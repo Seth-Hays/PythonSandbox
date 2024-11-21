@@ -1,12 +1,25 @@
 """
 Type your header comment.
-Name - Month Year
+Hays - November 2024
 """
 
 
 def main() -> None:
-  pass
+    word: str = input()
+    a,b = word.split(" ")
 
+    speed: int = int(a)
+    isBday: bool = bool(b)
 
-if __name__ == "__main__":
-  main()
+    if isBday:
+        speed = speed - 5
+
+    if speed <= 60:
+        print("no ticket")
+    
+    elif speed > 80:
+        print("big ticket")
+    
+    else:
+        print("small ticket")
+
